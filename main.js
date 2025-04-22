@@ -16,5 +16,16 @@ function moveTarget() {
   target.style.top = `${randomY}px`;
 }
 
+function increaseScore() {
+  score ++;
+  scoreBoard.innerHTML = "Score: " + score;
+}
 // Initial target position
 moveTarget();
+
+const ball_listener = target.addEventListener("contextmenu", (e)=> {
+  e.preventDefault();
+  moveTarget();
+  increaseScore();
+})
+
