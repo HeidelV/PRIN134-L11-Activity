@@ -38,6 +38,11 @@ function decreaseScore() {
   score --;
   scoreBoard.innerHTML = "Score: " + score;
 }
+
+function resetScore() {
+  score = 0;
+  scoreBoard.innerHTML = "Score: " + 0;
+}
 // Initial target position
 moveTarget();
 bombTarget();
@@ -57,3 +62,10 @@ const bomb_listener = bomb.addEventListener("contextmenu", (e)=> {
 setInterval(() => {
   bombTarget();
 }, 750);
+
+const spacebarListener = window.addEventListener("keydown", (e)=> {
+  if (e.code === "Space") {
+    e.preventDefault();
+    resetScore();  
+}
+})
