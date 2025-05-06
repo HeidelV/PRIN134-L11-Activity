@@ -7,12 +7,26 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <h2 id="form-title">Input Number of Targets </h3>
+    <form action="" id="setupForm">
+        <div id="setup-container">
+            <input type="number" id="quantity" name="quantity" min="1" max="5"> 
+            <button id="btn"">Setup</button>
+        </div>
+    </form>
     <div id="gameArea">
-        <div id="target"></div>
-        <div id="bomb"></div>
+        <div id="target">
+            
+        </div>
+        <!-- <div id="bomb"></div> -->
     </div>
     <div id="scoreBoard">Score: 0</div>
-    <div>Reset = Spacebar</div>
+    <div>
+        Reset = Spacebar
+    </div>
+    <div>
+        Use mouse right click to click the buttons
+    </div>
     <script src="main.js"></script>
 </body>
 </html>
